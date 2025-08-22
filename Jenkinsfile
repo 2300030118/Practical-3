@@ -21,7 +21,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git url: '', branch: 'master'
+                git url: 'https://github.com/2300030118/Practical-3.git', branch: 'main'
             }
         }
 
@@ -86,8 +86,8 @@ pipeline {
 
     post {
         success {
-            echo "✅ Backend deployed: http://184.72.122.226:9090/springapp1"
-            echo "✅ Frontend deployed: http://184.72.122.226:9090/frontapp1"
+            echo "✅ Backend deployed: http://16.171.225.189:9090/springapp1"
+            echo "✅ Frontend deployed: http://16.171.225.189:9090/frontapp1"
         }
         failure {
             echo "❌ Build or deployment failed"
